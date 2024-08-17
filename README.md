@@ -1,1 +1,1 @@
-# Hackerrank Challenges Solutions
+# LeetCode-HackerRank-Challenges-Solutions
