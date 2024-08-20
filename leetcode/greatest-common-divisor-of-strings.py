@@ -1,3 +1,5 @@
+from math import gcd
+
 def gcdOfStrings(str1: str, str2: str) -> str:
     len1, len2 = len(str1), len(str2)
 
@@ -12,6 +14,13 @@ def gcdOfStrings(str1: str, str2: str) -> str:
         if valid(i):
             return str1[:i]
     return ""
+
+
+def pythonicGcdOfStrings(str1: str, str2: str) -> str:
+    if str1+str2 != str2+str2: return ''
+    
+    max_length = gcd(len(str1), len(str2))
+    return str1[:max_length]
 
 
 str1 = "ABCABC"
