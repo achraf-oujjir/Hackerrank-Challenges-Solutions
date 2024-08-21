@@ -1,5 +1,5 @@
 def findDigits(n):
-    return len([n % i for i in [int(d) for d in str(n) if d != '0']])
+    return sum([not bool(n % i) for i in [int(d) for d in str(n) if d != '0']])
 
-n = 12
+n = 106108048 #should return 5
 print(findDigits(n))
