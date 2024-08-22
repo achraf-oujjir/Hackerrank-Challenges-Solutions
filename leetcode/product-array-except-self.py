@@ -1,5 +1,3 @@
-import math
-
 def productExceptSelf(nums: list[int]) -> list[int]:
     n = len(nums)
     
