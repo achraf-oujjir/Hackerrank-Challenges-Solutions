@@ -25,5 +25,15 @@ def optimizedProductExceptSelf(nums: list[int]) -> list[int]:
     
     return res
 
+def myProductExceptSelf(nums:list[int]) -> list[int]:
+    res, l, r = [1] * len(nums), 1, 1
+    for i in range(len(nums)):
+        res[i] *= l
+        l *= nums[i]
+        j = -i - 1
+        res[j] *= r
+        r *= nums[j]
+    return res
+
 nums = [1,2,3,4]
 print(productExceptSelf(nums))
